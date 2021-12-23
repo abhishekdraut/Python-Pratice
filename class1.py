@@ -6,27 +6,33 @@ class people:
         print("tickets confirmed")
 
 
-class male():
-    name="piyush"
-    age='21'
+class male:
+    def __init__(self,name):
+        self.__name = name
+        
+
     
-    def print_tickets(self):
-        return(self.name)+(" ")+(self.age)
+    def print_tickets(self,age):
+        
+        self.age1=age
+        return self.__name,self.age1
 
     def route(self):
-        print('your route is nasik to pune')
+        print(self.__name,'your route is nasik to pune')
 
         
 
 
 class female(people):
-    def print_tickets(self):
+    def print_tickets1(self):
         print('tickets are booked female travler')
 
     def route(slef):
         print("your route is pune to nasik")
 
 
-passenger = male()
-names=passenger.print_tickets()
-print(names)
+passenger = male("abhishek")
+print(passenger.print_tickets("21"))
+passenger.route()
+female1=female()
+female1.print_tickets()
